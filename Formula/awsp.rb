@@ -3,7 +3,7 @@ class Awsp < Formula
     homepage "https://github.com/electblake/homebrew-awsp"
     url "https://github.com/electblake/homebrew-awsp/archive/refs/tags/v0.0.2.tar.gz"
     version "0.0.2"
-    sha256 "3e01b4932d4d7e16cf97ced4efedd9f0d311018866b510752465a74c0ac7c0b7"
+    sha256 "b867fc5cbf9e4be389373664c495074cfab612f50aa2cbd0385eb894db614e2c"
   
     # depends_on "jq"
     # depends_on "grep"
