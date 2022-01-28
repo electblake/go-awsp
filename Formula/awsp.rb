@@ -3,7 +3,7 @@ class Awsp < Formula
     homepage "https://github.com/electblake/homebrew-awsp"
     url "https://github.com/electblake/homebrew-awsp/archive/refs/tags/v0.1.4.tar.gz"
     version "0.1.4"
-    sha256 "bb9879069efd71126249921dc13af0319c23b1f3471bb38574c506042a81a777"
+    sha256 "b24d91adfc79fe8a4ffb57e146fb26e53aa92aa8fe7e6920b04460ef434c38c9"
   
     def install
       bin.install Dir["bin/_awsp"]
