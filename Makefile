@@ -1,7 +1,8 @@
 INSTALL_DIR ?= ~/bin
-VERSION=0.1.2
-
+VERSION=0.1.3
 SRC=$(shell find . -name '*.go') go.mod
+.PHONY: clean release install uninstall
+
 awsp: $(SRC)
 	go build -o ./bin/_awsp_prompt .
 
