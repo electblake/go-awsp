@@ -52,3 +52,9 @@ function aws_prof {
 ```sh
 PROMPT='OTHER_PROMPT_STUFF $(aws_prof)'
 ```
+
+
+## References and Inspiration
+---
+- https://github.com/johnnyopao/awsp
+- https://github.com/99designs/aws-vault
