@@ -1,9 +1,9 @@
 class Awsp < Formula
     desc "Allows for easy switching between AWS profiles"
     homepage "https://github.com/electblake/homebrew-awsp"
-    url "https://github.com/electblake/homebrew-awsp/archive/refs/tags/v0.0.3.tar.gz"
-    version "0.0.2"
-    sha256 "720d32e4fbb0711d69da02fdfc0f18008341c1c7b7c2915f8ed4de714d7aba4f"
+    url "https://github.com/electblake/homebrew-awsp/archive/refs/tags/v0.1.0.tar.gz"
+    version "0.1.0"
+    sha256 "ca9fa6fecc92823f921f6d0457e021145acce0501eaa0a6a8d7ec06d16851398"
   
     def install
       bin.install Dir["bin/_awsp"]
