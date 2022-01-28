@@ -25,6 +25,12 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 
 Or `brew tap electblake/awsp` and then `brew install awsp`.
 
+### Updates
+
+Highly reccomend tap first `brew tap electblake/awsp`
+
+and then simple `brew upgrade awsp`
+
 ## Usage
 ```sh
 awsp
