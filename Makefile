@@ -1,5 +1,5 @@
 INSTALL_DIR ?= ~/bin
-VERSION=0.0.1
+VERSION=0.0.2
 
 SRC=$(shell find . -name '*.go') go.mod
 awsp: $(SRC)

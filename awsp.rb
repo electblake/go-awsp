@@ -1,9 +1,9 @@
 class Awsp < Formula
     desc "Allows for easy switching between AWS profiles"
     homepage "https://github.com/electblake/go-awsp"
-    url "https://github.com/electblake/go-awsp/archive/refs/tags/v0.0.1.tar.gz"
-    version "0.0.1"
-    sha256 "e2fc4ce2bc4ea6e551278c34d598125c67573fb1751f5c201817315c3c21df94"
+    url "https://github.com/electblake/go-awsp/archive/refs/tags/v0.0.2.tar.gz"
+    version "0.0.2"
+    sha256 "3e01b4932d4d7e16cf97ced4efedd9f0d311018866b510752465a74c0ac7c0b7"
   
     # depends_on "jq"
     # depends_on "grep"
