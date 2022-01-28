@@ -25,7 +25,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "awsp"
 	app.Usage = "AWS Profile Switcher"
-	app.Version = "0.1.0"
+	app.Version = "0.1.2"
 
 	cli.HelpPrinter = func(w io.Writer, templ string, data interface{}) {
 		fmt.Fprintf(w, "NAME:\n\tawsp - AWS Profile Switcher\n")
