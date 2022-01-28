@@ -5,9 +5,6 @@ class Awsp < Formula
     version "0.0.2"
     sha256 "720d32e4fbb0711d69da02fdfc0f18008341c1c7b7c2915f8ed4de714d7aba4f"
   
-    # depends_on "jq"
-    # depends_on "grep"
-  
     def install
       bin.install Dir["bin/_awsp"]
       bin.install Dir["bin/_awsp_prompt"]
