@@ -1,4 +1,4 @@
-module github.com/electblake/go-awsp
+module github.com/electblake/homebrew-awsp
 
 go 1.17
 

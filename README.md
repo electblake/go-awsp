@@ -18,16 +18,12 @@ You can also leave out the `--profile PROFILE_NAME` param to set your `default` 
 Refer to this doc for more information
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 
-## Setup (coming soon)
 
-```sh
-brew install awsp
-```
+## Homebrew Install
 
-Add the following to your `.bashrc` or `.zshrc` config
-```sh
-alias awsp="source _awsp"
-```
+`brew install electblake/awsp/awsp`
+
+Or `brew tap electblake/awsp` and then `brew install awsp`.
 
 ## Usage
 ```sh

@@ -1,0 +1,11 @@
+# Electblake Awsp
+
+## How do I install these formulae?
+
+`brew install electblake/awsp/<formula>`
+
+Or `brew tap electblake/awsp` and then `brew install <formula>`.
+
+## Documentation
+
+`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
