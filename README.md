@@ -54,3 +54,4 @@ PROMPT='OTHER_PROMPT_STUFF $(aws_prof)'
 ---
 - https://github.com/johnnyopao/awsp
 - https://github.com/99designs/aws-vault
+- https://github.com/kellyp/lowprofile
