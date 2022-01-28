@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	awsp "github.com/electblake/go-awsp/lib"
+	awsp "github.com/electblake/homebrew-awsp/lib"
 	"github.com/urfave/cli/v2"
 )
 
