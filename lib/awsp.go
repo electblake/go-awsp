@@ -85,7 +85,5 @@ func SaveProfileChoice(profile string) error {
 	err := WriteProfileChoice(profile)
 	os.Setenv("AWS_PROFILE", profile)
 
-	fmt.Printf("aws profile: %s\n", profile)
-
 	return err
 }
