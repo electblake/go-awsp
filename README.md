@@ -41,7 +41,7 @@ Here's a sample of my zsh prompt config using oh-my-zsh themes
 function aws_prof {
   local profile="${AWS_PROFILE:=default}"
 
-  echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
+  echo "%{$FG[238]%}aws(%{$FG[028]%}${profile}%{$FG[238]%})%{$reset_color%} "
 }
 ```
 
