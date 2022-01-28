@@ -3,7 +3,6 @@ package awsp
 import (
 	"errors"
 	"fmt"
-	"log"
 	"os"
 	"path"
 	"regexp"
@@ -20,28 +19,28 @@ func ReadAwsProfiles() ([]byte, error) {
 		panic(err)
 	}
 	if string(dat) == "" {
-		return nil, errors.New("empty data")
+		return nil, errors.New("no profile data in ~/.aws/config")
 	}
 
 	return dat, nil
 }
 
-func WriteProfileChoice(profile string) {
+func WriteProfileChoice(profile string) error {
 	if profile == defaultProfileChoice {
 		profile = ""
 	}
 	// fmt.Printf("save %s to ~/.awsp\n", profile)
 	err := os.WriteFile(path.Join(os.Getenv("HOME"), ".awsp"), []byte(profile), 0644)
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
+	return nil
 }
 
-func PromptProfileChoice(data []byte) string {
-
+func FindProfiles(data []byte) ([]string, error) {
 	re, err := regexp.Compile(`\[profile (.*)]`)
 	if err != nil {
-		log.Fatal(err)
+		return nil, err
 	}
 
 	profiles := re.FindAll(data, -1)
@@ -50,10 +49,10 @@ func PromptProfileChoice(data []byte) string {
 		fmt.Printf("Refer to this guide for help on setting up a new AWS profile:")
 		fmt.Printf("https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html")
 
-		log.Fatal("no profiles found")
+		return nil, errors.New("no profiles found")
 	}
 
-	// first and default choice
+	// first default choice
 	choices := []string{defaultProfileChoice}
 
 	for _, val := range profiles {
@@ -63,19 +62,30 @@ func PromptProfileChoice(data []byte) string {
 		// add to string map for promptui
 		choices = append(choices, choice)
 	}
-	// fmt.Printf("profiles: %s", choices)
+	return choices, nil
+}
+
+func PromptProfileChoice(profiles []string) (string, error) {
 
 	prompt := promptui.Select{
 		Label: "Choose a profile",
-		Items: choices,
+		Items: profiles,
 	}
 
 	_, result, err := prompt.Run()
 
 	if err != nil {
-		fmt.Printf("%v\n", err)
-		log.Fatal(err)
+		return "", err
 	}
 
-	return result
+	return result, nil
+}
+
+func SaveProfileChoice(profile string) error {
+	err := WriteProfileChoice(profile)
+	os.Setenv("AWS_PROFILE", profile)
+
+	fmt.Printf("aws profile: %s\n", profile)
+
+	return err
 }
