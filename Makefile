@@ -27,3 +27,6 @@ SHA256SUMS:
 	  bin/_awsp \
 	  bin/_awsp_prompt \
 		> $@
+
+clean:
+	rm -f ./bin/_awsp_prompt ./SHA256SUMS
