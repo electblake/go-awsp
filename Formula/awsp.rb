@@ -1,9 +1,9 @@
 class Awsp < Formula
     desc "Allows for easy switching between AWS profiles"
     homepage "https://github.com/electblake/homebrew-awsp"
-    url "https://github.com/electblake/homebrew-awsp/archive/refs/tags/v0.0.2.tar.gz"
+    url "https://github.com/electblake/homebrew-awsp/archive/refs/tags/v0.0.3.tar.gz"
     version "0.0.2"
-    sha256 "b867fc5cbf9e4be389373664c495074cfab612f50aa2cbd0385eb894db614e2c"
+    sha256 "720d32e4fbb0711d69da02fdfc0f18008341c1c7b7c2915f8ed4de714d7aba4f"
   
     # depends_on "jq"
     # depends_on "grep"
